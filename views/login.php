@@ -42,11 +42,11 @@
           data:{name:name, pass:pass},
           url:"http://localhost/login_register/request/login",
           success:function(result){
-          if(result == "False"){
-            $('#errorLogin').html("<p>Wrong Credentials</p>");
-            $('#errorLogin').show();
-            $('#errorLogin').delay(1500).fadeOut();
-          }
+          // if(result == "False"){
+          //   $('#errorLogin').html("<p>Wrong Credentials</p>");
+          //   $('#errorLogin').show();
+          //   $('#errorLogin').delay(1500).fadeOut();
+          // }
            console.log(result);
           
                 

@@ -24,7 +24,8 @@ class controllerClass
 
     public function login($model, $name, $pass){
         $login = $model->login($name, $pass);
-        if(sizeof($login) == 0){
+        
+        if(!(is_array($login))){
             return "False";
         }else{
             return($login);

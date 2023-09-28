@@ -47,13 +47,13 @@ switch ($url[2]) {
         switch ($url[3]){
             case 'login':
                 $login = $controller->login($model, $_POST['name'], $_POST['pass']);
-                if($login==""){
-                    print_r("False");
+                if($login=="False"){
+                    print_r(json_encode(["message"=>"Invalid credentials","status"=>"failed" ]));
                 }else{
                     $_SESSION['id'] = $login['id'];
                     $_SESSION['name'] = $login['name'];
+                    print_r(json_encode(["message"=>"found","status"=>"success" ]));
                     
-                    print_r($login);
                 }
                 // print_r($login);
                     
